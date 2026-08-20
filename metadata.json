@@ -1,0 +1,6 @@
+{
+  "name": "Haber Cafe & Resto",
+  "description": "Website landing page premium untuk Haber Cafe & Resto Bandung dengan reservasi WhatsApp langsung.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
