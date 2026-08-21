@@ -23,12 +23,17 @@ export const Navbar: React.FC = () => {
     { label: "Tentang", href: "#tentang" },
     { label: "Menu", href: "#menu" },
     { label: "Experience", href: "#experience" },
+    { label: "Event", href: "/event" },
     { label: "Wedding", href: "#wedding" },
     { label: "Galeri", href: "#galeri" },
     { label: "Lokasi", href: "#lokasi" },
   ];
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/") && !href.startsWith("/#")) {
+      setIsMobileMenuOpen(false);
+      return; // biarkan browser navigate ke halaman baru
+    }
     e.preventDefault();
     setIsMobileMenuOpen(false);
     const element = document.querySelector(href);

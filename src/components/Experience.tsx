@@ -70,6 +70,13 @@ export const Experience: React.FC = () => {
                       <span>Buka Katalog Elmour ↗</span>
                     </div>
                   )}
+
+                  {item.id === "event" && (
+                    <div className="absolute top-4 right-4 px-3 py-1 bg-[#181A16]/90 backdrop-blur-sm border border-[#B88E2F]/60 text-[10px] font-bold uppercase tracking-widest text-[#B88E2F] shadow-lg flex items-center gap-1.5">
+                      <CalendarCheck className="w-3 h-3 text-[#B88E2F]" />
+                      <span>Lihat Detail ↓</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Text Card Body */}
@@ -115,6 +122,24 @@ export const Experience: React.FC = () => {
                   transition={{ duration: 0.45, delay: index * 0.1 }}
                   className="group relative overflow-hidden bg-white border-2 border-[#B88E2F]/40 hover:border-[#B88E2F] hover:shadow-2xl transition-all duration-500 flex flex-col h-full shadow-lg block focus:outline-none focus:ring-2 focus:ring-[#B88E2F]"
                   title="Buka HABER Elmour Wedding Planner di Tab Baru"
+                >
+                  {CardContent}
+                </motion.a>
+              );
+            }
+
+            if (item.id === "event") {
+              return (
+                <motion.a
+                  key={item.id}
+                  href="/event"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.45, delay: index * 0.1 }}
+                  className="group relative overflow-hidden bg-white border border-gray-200 hover:border-[#B88E2F] hover:shadow-2xl transition-all duration-500 flex flex-col h-full shadow-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#B88E2F]"
                 >
                   {CardContent}
                 </motion.a>
