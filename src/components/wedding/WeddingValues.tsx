@@ -60,53 +60,37 @@ export const WeddingValues: React.FC = () => {
           </p>
         </div>
 
-        {/* 8 Value Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* 8 Value Cards Grid (2 Columns layout with bold & attractive text, no icons/numbers) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {weddingValues.map((val, idx) => (
             <motion.div
               key={val.id}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.45, delay: idx * 0.08 }}
-              className={`relative p-6 sm:p-7 bg-white border ${
+              transition={{ duration: 0.45, delay: idx * 0.05 }}
+              className={`relative p-7 sm:p-8 bg-white border-y border-r ${
                 val.highlight 
-                  ? "border-[#B88E2F] shadow-xl" 
-                  : "border-gray-200 hover:border-[#B88E2F] hover:shadow-2xl"
-              } transition-all duration-500 flex flex-col justify-between group shadow-lg`}
+                  ? "border-l-4 border-l-[#B88E2F] border-t-gray-200 border-b-gray-200 border-r-gray-200 shadow-xl" 
+                  : "border-l-4 border-l-[#B88E2F]/40 hover:border-l-[#B88E2F] border-t-gray-200 border-b-gray-200 border-r-gray-200 hover:shadow-2xl"
+              } transition-all duration-300 group shadow-md rounded-r-xl rounded-l-sm hover:-translate-y-1`}
             >
               {/* Badge */}
               {val.highlight && (
-                <div className="absolute top-4 right-4 px-3 py-1 bg-[#B88E2F]/10 border border-[#B88E2F]/40 text-[#B88E2F] text-[10px] font-bold uppercase tracking-wider">
+                <div className="absolute top-5 right-5 px-3 py-1 bg-[#B88E2F]/15 border border-[#B88E2F]/40 text-[#B88E2F] text-[10px] font-bold uppercase tracking-wider rounded-full">
                   Signature
                 </div>
               )}
 
-              <div>
-                {/* Icon Container */}
-                <div className="w-12 h-12 mb-5 rounded-none bg-[#F9FAFB] border border-gray-200 group-hover:border-[#B88E2F] text-[#B88E2F] flex items-center justify-center transition-all duration-300">
-                  {getIcon(val.icon)}
-                </div>
+              {/* Main Text Content */}
+              <div className="pr-12 sm:pr-16">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold tracking-wide text-gray-900 group-hover:text-[#B88E2F] transition-colors leading-snug mb-3">
+                  {val.title}
+                </h3>
 
-                <div className="flex items-start gap-2 mb-2">
-                  <span className="text-xs font-serif text-[#B88E2F] font-bold">0{idx + 1}.</span>
-                  <h3 className="font-serif text-lg sm:text-xl font-bold tracking-wide text-[#1F2937] group-hover:text-[#B88E2F] transition-colors leading-snug">
-                    {val.title}
-                  </h3>
-                </div>
-
-                <p className="text-xs sm:text-sm text-[#4B5563] font-light leading-relaxed mt-2">
+                <p className="text-sm sm:text-base text-gray-700 font-medium leading-relaxed">
                   {val.description}
                 </p>
-              </div>
-
-              <div className="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-[11px] uppercase tracking-wider text-[#9CA3AF]">
-                <span className="flex items-center gap-1 text-[#4B5563]">
-                  <Check className="w-3.5 h-3.5 text-[#B88E2F]" /> Terjamin
-                </span>
-                <span className="text-[#B88E2F] opacity-0 group-hover:opacity-100 transition-opacity font-semibold">
-                  Detail →
-                </span>
               </div>
             </motion.div>
           ))}
