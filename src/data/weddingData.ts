@@ -388,47 +388,62 @@ export const weddingServiceBreakdown = {
   },
 };
 
+export interface VendorCategory {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+  image: string;
+  examples: string[];
+}
+
 export const weddingVendorCategories: VendorCategory[] = [
   {
     id: "photo-video",
     title: "Fotografi & Videografi",
-    description: "Dokumentasi cinematic 4K, drone aerial, teaser video, dan album foto eksklusif.",
+    description: "Dokumentasi cinematic 4K, drone aerial, teaser video, dan album foto eksklusif untuk mengabadikan momen berharga Anda.",
     icon: "Camera",
+    image: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=85&w=1000&auto=format&fit=crop",
     examples: ["Cinematic Teaser", "Drone 4K", "Same-Day Edit Video", "Luxury Photo Album"],
   },
   {
     id: "decoration-florist",
     title: "Dekorasi & Florist",
-    description: "Desain panggung pelaminan megah, rangkaian bunga segar impor, crystal chandeliers, dan lighting.",
+    description: "Desain panggung pelaminan megah, rangkaian bunga segar impor, crystal chandeliers, dan arsitektur lighting memukau.",
     icon: "Flower2",
+    image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=85&w=1000&auto=format&fit=crop",
     examples: ["Fresh Flower Arrangements", "Custom Backdrop 3D", "Lighting Architecture", "Photobooth Setup"],
   },
   {
     id: "catering",
     title: "Katering & Kuliner",
-    description: "Pilihan buffet lezat, live cooking stalls, fine dining menu, dan tester makanan bersama keluarga.",
+    description: "Pilihan buffet lezat, live cooking stalls, fine dining menu, dan sesi tester makanan eksklusif bersama keluarga.",
     icon: "Utensils",
+    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=85&w=1000&auto=format&fit=crop",
     examples: ["Buffet Nusantara & Western", "Live Cooking Stall", "Family Food Testing", "VIP Fine Dining Service"],
   },
   {
     id: "entertainment",
     title: "Musik & Entertainment",
-    description: "Master of Ceremony (MC) kawakan, live acoustic, jazz band, orkestra, hingga penampilan artis nasional.",
+    description: "Master of Ceremony (MC) kawakan, live acoustic band, jazz chamber, orkestra, hingga penampilan hiburan artis nasional.",
     icon: "Music",
+    image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=85&w=1000&auto=format&fit=crop",
     examples: ["MC Profesional", "Live Band / Chamber Orchestra", "Artis Nasional", "Sound & Lighting Show"],
   },
   {
     id: "mua-wardrobe",
     title: "MUA & Busana Pengantin",
-    description: "Tata rias pengantin flawless tahan lama serta busana adat nusantara dan gaun pengantin internasional.",
+    description: "Tata rias pengantin flawless tahan lama serta koleksi busana adat nusantara dan gaun pengantin internasional berkelas.",
     icon: "Sparkles",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop",
     examples: ["MUA Top Tier", "Busana Adat Tradisional", "International Wedding Gown", "Family Wardrobe"],
   },
   {
     id: "invitation-tech",
     title: "Undangan Digital & Souvenir",
-    description: "Website pernikahan interaktif dengan RSVP online, QR code check-in tamu, dan souvenir mewah.",
+    description: "Website pernikahan interaktif dengan RSVP online, QR code check-in tamu, dan pilihan souvenir eksklusif bertema mewah.",
     icon: "Smartphone",
+    image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=85&w=1000&auto=format&fit=crop",
     examples: ["Custom Wedding Website", "E-Invitation & WhatsApp RSVP", "QR Code Guest Scan", "Premium Souvenir"],
   },
 ];
