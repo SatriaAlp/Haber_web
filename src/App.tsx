@@ -10,6 +10,7 @@ import { About } from "./components/About";
 import { FeaturedMenu } from "./components/FeaturedMenu";
 import { Experience } from "./components/Experience";
 import { EventWedding } from "./components/EventWedding";
+import { EventLandingPage } from "./components/event/EventLandingPage";
 import { Gallery } from "./components/Gallery";
 import { ReservationCTA } from "./components/ReservationCTA";
 import { Location } from "./components/Location";
@@ -18,7 +19,7 @@ import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { WeddingLandingPage } from "./components/wedding/WeddingLandingPage";
 
 export default function App() {
-  const [currentRoute, setCurrentRoute] = useState<"home" | "wedding">(() => {
+  const [currentRoute, setCurrentRoute] = useState<"home" | "wedding" | "event">(() => {
     if (typeof window !== "undefined") {
       const path = window.location.pathname.toLowerCase();
       const search = window.location.search.toLowerCase();
@@ -31,6 +32,9 @@ export default function App() {
         hash === "#wedding-page"
       ) {
         return "wedding";
+      }
+      if (path === "/event" || path.startsWith("/event/") || search.includes("page=event")) {
+        return "event";
       }
     }
     return "home";
@@ -49,6 +53,8 @@ export default function App() {
         hash === "#wedding-page"
       ) {
         setCurrentRoute("wedding");
+      } else if (path === "/event" || path.startsWith("/event/") || search.includes("page=event")) {
+        setCurrentRoute("event");
       } else {
         setCurrentRoute("home");
       }
@@ -64,6 +70,10 @@ export default function App() {
 
   if (currentRoute === "wedding") {
     return <WeddingLandingPage />;
+  }
+
+  if (currentRoute === "event") {
+    return <EventLandingPage />;
   }
 
   return (

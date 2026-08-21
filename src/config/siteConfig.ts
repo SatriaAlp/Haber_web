@@ -5,24 +5,36 @@
 
 export const siteConfig = {
   name: "Haber Cafe & Resto",
-  tagline: "Coffee • Food • Live Music",
+  tagline: "Kalau rempahnya pilihan, rasanya pasti beda.",
+  taglineShort: "Kuliner • Event • Live Music",
   location: "Bandung, Jawa Barat",
-  fullAddress: "Jl. R.E. Martadinata No. 123, Citarum, Bandung Wetan, Kota Bandung, Jawa Barat 40115",
-  
-  // Contacts & Socials (Dummy values)
-  whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || "6281234567890",
-  whatsappDisplay: "+62 812-3456-7890",
-  googleMapsUrl: import.meta.env.VITE_GOOGLE_MAPS_URL || "https://maps.google.com/?q=Haber+Cafe+%26+Resto+Bandung",
-  instagramUrl: import.meta.env.VITE_INSTAGRAM_URL || "https://instagram.com/habercaferesto",
-  instagramHandle: "@habercaferesto",
-  tiktokUrl: "https://tiktok.com/@habercaferesto",
-  email: "halo@habercaferesto.com",
+  fullAddress: "Jl. Raya Cipadung No. 455, Cibiru, Kota Bandung, Jawa Barat",
+  websiteUrl: "https://habercafeandresto.co.id",
 
-  // Hours
+  // Contacts (data real dari website)
+  phoneRestoCafe: "0881024552134",
+  phoneWedding: "085318025699",
+  phoneEvent: "089655717503",
+  phoneKerjasama: "082113508372",
+
+  whatsappNumber: import.meta.env.VITE_WHATSAPP_NUMBER || "6282113508372",
+  whatsappDisplay: "+62 821-1350-8372",
+  whatsappEvent: "6289655717503",
+  whatsappEventDisplay: "+62 896-5571-7503",
+
+  googleMapsUrl: import.meta.env.VITE_GOOGLE_MAPS_URL || "https://maps.app.goo.gl/9viSDF8jvGsNoezx9",
+  instagramUrl: import.meta.env.VITE_INSTAGRAM_URL || "https://instagram.com/haber_cafeandresto",
+  instagramHandle: "@haber_cafeandresto",
+  tiktokUrl: "https://tiktok.com/@haber.cafe.and.re",
+  tiktokHandle: "@haber.cafe.and.re",
+  email: "info@habercafeandresto.co.id",
+
+  // Hours (data real dari website)
   openingHours: {
-    weekdays: "10:00 - 22:00 WIB",
-    weekends: "10:00 - 23:00 WIB",
-    liveMusic: "Rabu - Minggu (Mulai 19:00 WIB)",
+    daily: "09:00 - 23:00 WIB",
+    weekdays: "09:00 - 23:00 WIB",
+    weekends: "09:00 - 23:00 WIB",
+    liveMusic: "Setiap Hari (Mulai 19:00 WIB)",
   },
 
   // WhatsApp Messages
