@@ -53,30 +53,41 @@ export const WeddingPricing: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.45, delay: idx * 0.12 }}
-                className={`relative flex flex-col justify-between rounded-none bg-white transition-all duration-500 ${
+                className={`relative flex flex-col justify-between rounded-2xl overflow-hidden bg-white transition-all duration-500 group ${
                   pkg.isPopular
                     ? "border-2 border-[#B88E2F] shadow-2xl lg:-translate-y-2"
                     : "border border-gray-200 hover:border-[#B88E2F] shadow-lg hover:shadow-2xl"
                 }`}
               >
-                {/* Popular / Signature Floating Badge */}
-                {pkg.badge && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 text-[11px] font-bold uppercase tracking-widest text-white bg-[#B88E2F] shadow-md">
-                    {pkg.badge}
+                {/* Package Photo Banner Header */}
+                <div className="relative aspect-[16/9] w-full overflow-hidden bg-black/40">
+                  <img
+                    src={pkg.image}
+                    alt={pkg.title}
+                    className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent opacity-85 pointer-events-none"></div>
+
+                  {/* Floating Badge on Photo */}
+                  {pkg.badge && (
+                    <div className="absolute top-4 right-4 px-3.5 py-1 text-[10px] font-bold uppercase tracking-widest text-white bg-[#B88E2F] shadow-md rounded-full">
+                      {pkg.badge}
+                    </div>
+                  )}
+
+                  {/* Package Capacity Tag */}
+                  <div className="absolute bottom-3 left-4 flex items-center gap-1.5 px-3 py-1 bg-black/60 backdrop-blur-md text-white border border-white/20 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                    <Users className="w-3.5 h-3.5 text-[#B88E2F]" />
+                    <span>{pkg.capacity}</span>
                   </div>
-                )}
+                </div>
 
                 {/* Card Top Section */}
-                <div className="p-7 sm:p-8">
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="text-[11px] uppercase tracking-[0.2em] text-[#B88E2F] font-bold">
-                      {pkg.tagline}
-                    </span>
-                    <div className="flex items-center gap-1 text-[#B88E2F]">
-                      <Users className="w-3.5 h-3.5" />
-                      <span className="text-[10px] uppercase font-bold tracking-wider">{pkg.capacity}</span>
-                    </div>
-                  </div>
+                <div className="p-6 sm:p-8 flex-1">
+                  <span className="text-[11px] uppercase tracking-[0.2em] text-[#B88E2F] font-bold block mb-1">
+                    {pkg.tagline}
+                  </span>
 
                   <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#1F2937] mb-3">
                     {pkg.title}
