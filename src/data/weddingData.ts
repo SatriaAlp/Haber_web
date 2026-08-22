@@ -19,7 +19,6 @@ export interface WeddingPackage {
   priceNumeric: number;
   capacity: string;
   badge?: string;
-  image: string;
   isPopular?: boolean;
   colorScheme: "emerald" | "gold" | "rose";
   description: string;
@@ -153,7 +152,6 @@ export const weddingPackages: WeddingPackage[] = [
     priceNumeric: 35000000,
     capacity: "Fleksibel (Indoor / Outdoor)",
     badge: "Galery Karya Best Value",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=85&w=1000&auto=format&fit=crop",
     colorScheme: "emerald",
     description: "Solusi dekorasi pelaminan modern bertema Elegant & Glamour dengan ornamen bunga segar, crystal chandelier, dan lighting artistik.",
     phases: [
@@ -186,7 +184,6 @@ export const weddingPackages: WeddingPackage[] = [
     priceNumeric: 250000000,
     capacity: "300 – 800 Tamu",
     badge: "Paling Diminati ⭐",
-    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=85&w=1000&auto=format&fit=crop",
     isPopular: true,
     colorScheme: "gold",
     description: "Paket lengkap all-in-one dari tunangan hingga bulan madu domestik dengan layanan kelas menengah atas dan bonus mobil Alphard pengantin.",
@@ -261,7 +258,6 @@ export const weddingPackages: WeddingPackage[] = [
     priceNumeric: 390000000,
     capacity: "500 – 2.000 Tamu",
     badge: "Ultra Luxury Signature 👑",
-    image: "https://images.unsplash.com/photo-1544077960-604201fe74bc?q=85&w=1000&auto=format&fit=crop",
     colorScheme: "emerald",
     description: "Mahakarya pernikahan impian berskala megah menyasar pasangan profesional, pengusaha, dan keluarga besar dengan pre-wedding & honeymoon mancanegara.",
     phases: [
